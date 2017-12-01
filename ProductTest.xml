@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test suite">
+    <test name="Tests chrome">
+        <parameter name="driverName" value="chrome"/>
+        <classes>
+            <class name="lecture4.ProductTest">
+            </class>
+        </classes>
+    </test>
+</suite>

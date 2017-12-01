@@ -7,14 +7,52 @@
     <groupId>PrestaShop</groupId>
     <artifactId>PrestaShop</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20.1</version>
+                <configuration>
+                    <!-- <argLine>-Xms512m -Xmx1024m</argLine> -->
+                    <argLine>-Xms256m -Xmx512m</argLine>
+                    <systemPropertyVariables>
+                        <surefire.reports.directory>
+                            ./target/surefire-reports/test-output
+                        </surefire.reports.directory>
+                    </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>ProductTest.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <reportsDirectory>./target/surefire-reports/test-output</reportsDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
 
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>3.0.1</version>
-    </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 

@@ -23,11 +23,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="ForTest2Avto" />
+        <module name="Prestashop" />
         <module name="Serhiienko" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ForTest2Avto" target="1.5" />
+      <module name="Prestashop" target="1.7" />
       <module name="Serhiienko" target="1.5" />
     </bytecodeTargetLevel>
   </component>
