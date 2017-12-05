@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test suite">
+    <test name="Tests chrome" verbose="1" parallel="true">
+        <parameter name="driverName" value="chrome"/>
+        <classes>
+            <class name="lecture5.BuyProductTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Tests default" verbose="1" parallel="true">
+        <parameter name="driverName" value="default"/>
+        <classes>
+            <class name="lecture5.BuyProductTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Tests firefox" verbose="1" parallel="true">
+        <parameter name="driverName" value="firefox"/>
+        <classes>
+            <class name="lecture5.BuyProductTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Tests android" verbose="1" parallel="true">
+        <parameter name="driverName" value="android"/>
+        <classes>
+            <class name="lecture5.BuyProductTest">
+            </class>
+        </classes>
+    </test>
+
+</suite>

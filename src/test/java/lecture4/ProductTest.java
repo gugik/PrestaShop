@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
@@ -84,7 +85,8 @@ public class ProductTest {
                 "Product price is not valid");
 
         String textAmount = webDriver.findElement(By.cssSelector(".product-quantities > span")).getText();
-        String amountExist = textAmount.substring(0, textPrice.indexOf(" ") - 2);
+        //String amountExist = textAmount.substring(0, textPrice.indexOf(" ") - 2);
+        String amountExist = textAmount.substring(0, textAmount.indexOf(" "));
 
 
         Assert.assertTrue(amountExist.trim().equals(String.valueOf(product.getAmount())),
